@@ -1,0 +1,54 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    border-bottom: var(--border_bottom);
+}
+.title {
+    font-size: 1.5rem;
+}
+.title h1 span {
+    color: var(--primary_color);
+}
+.options {
+    display: flex;
+    align-items: center;
+}
+.cart, .user {
+    border-radius: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    padding: 0.8rem;
+    margin-right: 1.1rem;
+    cursor: pointer;
+    transition: var(--smooth);
+}
+.cart img, .user img {
+    width: 24px;
+}
+.cart:hover, .user:hover {
+    background-color: var(--dim_primary);
+    box-shadow: 0 0 15px var(--dim_primary);
+}
+.search {
+    border: none;
+    outline: none;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    border-radius: var(--radius);
+    padding: 0.8rem;
+    background-color: var(--light_color);
+    transition: var(--smooth);
+}
+.search:focus {
+    box-shadow: 0 0 8px var(--dim_primary);
+}
+.navbar input::after {
+    content: "";
+    width: 55px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+    z-index: 100;
+}

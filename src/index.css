@@ -1,0 +1,42 @@
+/* ROOT */
+:root {
+  --primary_color: #50bed2;
+  --dim_primary: rgba(80, 191, 210, 0.4);
+  --black_color: #202124;
+  --light_color: #f9f9f9;
+  --radius: 8px;
+  --border_bottom: 1px solid rgba(0, 0, 0, 0.1);
+  --smooth: all 0.4s ease;
+}
+
+/* FONT */
+@font-face {
+	font-family: 'Custom';
+	font-weight: 400;
+	font-style: normal;
+	src: url("./assets/fonts/Signika-Regular.ttf") format("woff");
+}
+  
+@font-face {
+	font-family: 'Custom';
+	font-weight: 700;
+	font-style: normal;
+	src: url("./assets/fonts/Signika-Bold.ttf") format("woff");
+}
+
+body, input {
+  font-family: 'Custom';
+}
+
+/* SET DEFAULT SETTING */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 1.5rem 5rem;
+  box-sizing: border-box;
+  color: var(--black_color);
+  background-color: var(--light_color);
+}
