@@ -5,7 +5,8 @@
   --black_color: #202124;
   --light_color: #f9f9f9;
   --radius: 8px;
-  --border_bottom: 1px solid rgba(0, 0, 0, 0.1);
+  --border: 1px solid rgba(0, 0, 0, 0.1);
+  --padding_container: 1.5rem 4rem;
   --smooth: all 0.4s ease;
 }
 
@@ -35,7 +36,7 @@ html {
 
 body {
   margin: 0;
-  padding: 1.5rem 5rem;
+  padding: 0;
   box-sizing: border-box;
   color: var(--black_color);
   background-color: var(--light_color);
