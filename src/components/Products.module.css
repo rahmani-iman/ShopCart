@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--padding_container);
+}
+.container img {
+    position: absolute;
+    top: 10.5rem;
+    width: 500px;
+    height: 500px;
+    opacity: 0.7;
+}
