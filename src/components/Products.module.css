@@ -1,13 +1,22 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     padding: var(--padding_container);
+    margin-top: 2rem;
 }
-.container img {
-    position: absolute;
-    top: 10.5rem;
-    width: 500px;
-    height: 500px;
-    opacity: 0.7;
+.container h1 {
+    margin: 5rem 0;
+    font-size: 3.5rem;
+}
+.cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .cards {
+        justify-content: center;
+    }
 }
