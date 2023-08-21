@@ -16,7 +16,6 @@ import { shorten, isInCart, quantityCount } from '../../helper/functions';
 // Actions
 import { addItem, removeItem, increase, decrease } from '../../redux/cart/cartAction';
 
-
 const Card = ({productData}) => {
 
     const state = useSelector(state => state.cartState);

@@ -41,4 +41,5 @@ body {
   box-sizing: border-box;
   color: var(--black_color);
   background-color: var(--light_color);
+  overflow-x: hidden;
 }

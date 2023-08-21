@@ -3,7 +3,7 @@
     justify-content: space-around;
     align-items: center;
     padding: var(--padding_container);
-    padding-top: 10rem;
+    padding-top: 5rem;
 }
 .banner img {
     width: 600px;
@@ -40,6 +40,9 @@
     }
 }
 @media screen and (max-width: 600px) {
+    .container {
+        padding-top: 3rem;
+    }
     .banner img {
         width: 400px;
     }

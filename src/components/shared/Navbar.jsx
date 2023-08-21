@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 //Style
 import style from './Navbar.module.css';
 
 //Images 
-import cart from '../../assets/images/cart.png';
-import user from '../../assets/images/user.png';
-import search from '../../assets/images/search.png';
+import cartIcon from '../../assets/images/cart.png';
+import userIcon from '../../assets/images/user.png';
+import searchIcon from '../../assets/images/search.png';
+
+//Actions
+import { setInputValue } from "../../redux/searchValues/searchValuesAction";
 
 const Navbar = () => {
 
@@ -15,7 +18,9 @@ const Navbar = () => {
     const clickHandler = () => {
         setIsExpanded(!isExpanded)
     };
-    const state = useSelector(state => state.cartState);
+
+    const dispatch = useDispatch();
+    const cartState = useSelector(state => state.cartState);
 
     return (
         <div className={style.navbar}>
@@ -29,22 +34,23 @@ const Navbar = () => {
             </div>
             <div className={`${style.options} ${isExpanded && style.expanded}`}>
                 <div className={style.searchbar}>
-                    <input type="text" placeholder="search ..." className={style.search}/>
-                    <img src={search} alt="search" />
+                    <input type="text" placeholder="search ..." className={style.search} onChange={(e) => dispatch(setInputValue(e.target.value))}/>
+                    <img src={searchIcon} alt="search" />
                 </div>
                 <div className={style.user_btns}>
                     <div className={style.cart}>
-                        <span className={style.counter}>{state.itemsCounter}</span>
-                        <img src={cart} alt="cart"/>
+                        <span className={style.counter}>{cartState.itemsCounter}</span>
+                        <img src={cartIcon} alt="cart"/>
                     </div>
                     <div className={style.user}>
-                        <img src={user} alt="user"/>
+                        <img src={userIcon} alt="user"/>
                     </div>
                 </div>
                 <ul className={style.category}>
-                    <li>Bags</li>
-                    <li>Shoes</li>
-                    <li>T-Shirts</li>
+                    <li>electronics</li>
+                    <li>jewelery</li>
+                    <li>men's clothing</li>
+                    <li>women's clothing</li>
                 </ul>
             </div>
         </div>
