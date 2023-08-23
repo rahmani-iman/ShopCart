@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
 // Style
-import styles from "./Card.module.css";
+import style from "./Card.module.css";
 
 // Icons
 import trashIcon from "../../assets/images/trash.svg";
@@ -22,19 +22,19 @@ const Card = ({productData}) => {
     const dispatch = useDispatch();
 
     return (
-        <div className={styles.container} >
-            <img className={styles.cardImage} src={productData.image} alt="product" />
+        <div className={style.container} >
+            <img className={style.cardImage} src={productData.image} alt="product" />
             <h3>{shorten(productData.title)}</h3>
             <p>{`${productData.price} $`}</p>
-            <div className={styles.linkContainer}>
+            <div className={style.linkContainer}>
                 <Link to={`/products/${productData.id}`}>Details</Link>
-                <div className={styles.buttonContainer}>
-                    {quantityCount(state, productData.id) === 1 && <button className={styles.smallButton} onClick={() => dispatch(removeItem(productData))}><img src={trashIcon} alt="trash_icon" /></button>}
-                    {quantityCount(state, productData.id) > 1 && <button className={styles.smallButton} onClick={() => dispatch(decrease(productData))}><img src={minus} alt='minus_icon' /></button>}
-                    {quantityCount(state, productData.id) > 0 && <span className={styles.counter}>{quantityCount(state, productData.id)}</span>}
+                <div className={style.buttonContainer}>
+                    {quantityCount(state, productData.id) === 1 && <button className={style.smallButton} onClick={() => dispatch(removeItem(productData))}><img src={trashIcon} alt="trash_icon" /></button>}
+                    {quantityCount(state, productData.id) > 1 && <button className={style.smallButton} onClick={() => dispatch(decrease(productData))}><img src={minus} alt='minus_icon' /></button>}
+                    {quantityCount(state, productData.id) > 0 && <span className={style.counter}>{quantityCount(state, productData.id)}</span>}
                     {
                         isInCart(state, productData.id) ?
-                        <button className={styles.smallButton} onClick={() => dispatch(increase(productData))}><img src={plus} alt='plus_icon' /></button> :
+                        <button className={style.smallButton} onClick={() => dispatch(increase(productData))}><img src={plus} alt='plus_icon' /></button> :
                         <button onClick={() => dispatch(addItem(productData))}>Add to Cart</button>
                     }
                     {/*To write in redux format, we must enter type and payload manually and act as follows in dispatch: onClick={() => dispatch({type: "DECREASE", payload: productData})}*/}

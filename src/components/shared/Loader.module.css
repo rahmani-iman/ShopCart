@@ -5,3 +5,10 @@
     align-items: center;
     margin-top: 5rem;
 }
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .container img{
+        width: 150px;
+    }
+}

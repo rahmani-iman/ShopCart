@@ -1,20 +1,27 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import { Route, Routes, Navigate, useParams } from 'react-router-dom';
 
 //Redux Store
 import store from './redux/store';
 
 //Components
 import Navbar from './components/shared/Navbar';
-import Banner from './components/Banner';
 import Products from './components/Products';
+import ProductsDetails from './components/ProductDetails';
+import Footer from './components/shared/Footer';
 
 const App = () => {
   return (
     <Provider store={store}>
       <Navbar />
-      <Banner />
-      <Products />
+      <Routes>
+        <Route path="/products/:id" element={<ProductsDetails />} />
+        <Route path="/products" element={<Products />} />
+        {/*<Route path="/cart" element={<ShopCart />} */}
+        <Route path="/" element={<Navigate to="/products"/>} />
+      </Routes>
+      <Footer />
     </Provider>
   );
 };

@@ -1,0 +1,7 @@
+.container {
+    border-top: var(--border);
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}

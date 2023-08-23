@@ -3,6 +3,7 @@
   --primary_color: #50bed2;
   --bold_primary: #1e89c7;
   --dim_primary: rgba(80, 191, 210, 0.4);
+  --green_color: #2e6930;
   --black_color: #202124;
   --light_color: #f9f9f9;
   --radius: 8px;
@@ -41,5 +42,4 @@ body {
   box-sizing: border-box;
   color: var(--black_color);
   background-color: var(--light_color);
-  overflow-x: hidden;
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 //Style
 import style from './Navbar.module.css';
@@ -24,9 +25,9 @@ const Navbar = () => {
 
     return (
         <div className={style.navbar}>
-            <div className={style.title}>
+            <Link to='/products' className={style.title}>
                 <h1>Shop<span>Cart</span></h1>
-            </div>
+            </Link>
             <div className={style.hamburger_menu} onClick={clickHandler}>
                 <span className={`${style.bar} ${style.bar_one} ${isExpanded && style.expanded}`}></span>
                 <span className={`${style.bar} ${style.bar_two} ${isExpanded && style.expanded}`}></span>
@@ -47,10 +48,11 @@ const Navbar = () => {
                     </div>
                 </div>
                 <ul className={style.category}>
-                    <li>electronics</li>
-                    <li>jewelery</li>
-                    <li>men's clothing</li>
-                    <li>women's clothing</li>
+                    <li onClick={() => dispatch(setInputValue(""))}>all products</li>
+                    <li onClick={(e) => dispatch(setInputValue(e.target.innerText))}>electronics</li>
+                    <li onClick={(e) => dispatch(setInputValue(e.target.innerText))}>jewelery</li>
+                    <li onClick={(e) => dispatch(setInputValue(e.target.innerText))}>men's clothing</li>
+                    <li onClick={(e) => dispatch(setInputValue(e.target.innerText))}>women's clothing</li>
                 </ul>
             </div>
         </div>

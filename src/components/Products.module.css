@@ -1,9 +1,70 @@
-.container {
+/* Banner */
+.bannerContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: var(--padding_container);
+    padding-top: 5rem;
+}
+.banner img {
+    width: 600px;
+}
+.title {
+    width: 480px;
+    text-align: justify;
+}
+.title h1{
+    font-size: 4rem;
+}
+.title span{
+    color: var(--primary_color);
+}
+.title p {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+.title img {
+    width: 120px;
+    position: absolute;
+    opacity: 0.7;
+    transform: rotate(180deg);
+}
+
+/* Banner Responsive */
+@media screen and (max-width: 1080px) {
+    .bannerContainer {
+        flex-direction: column;
+        padding-top: 6rem;
+    }
+    .title img {
+        transform: rotate(80deg);
+    }
+}
+@media screen and (max-width: 600px) {
+    .bannerContainer {
+        padding-top: 3rem;
+    }
+    .banner img, .title {
+        width: 100%;
+    }
+    .title h1 {
+        font-size: 2.8rem;
+    }
+    .title p {
+        font-size: 1.8rem;
+    }
+    .title img {
+        width: 80px;
+    }
+}
+
+/* Products */
+.productsContainer {
     text-align: center;
     padding: var(--padding_container);
     margin-top: 2rem;
 }
-.container h1 {
+.productsContainer h1 {
     margin: 5rem 0;
     font-size: 3.5rem;
 }
@@ -15,7 +76,7 @@
     column-gap: 50px;
 }
 
-/* Responsive */
+/* Products Responsive */
 @media (max-width: 600px) {
     .cards {
         justify-content: center;
