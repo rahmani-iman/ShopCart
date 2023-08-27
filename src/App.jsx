@@ -9,6 +9,7 @@ import store from './redux/store';
 import Navbar from './components/shared/Navbar';
 import Products from './components/Products';
 import ProductsDetails from './components/ProductDetails';
+import Cart from './components/Cart';
 import Footer from './components/shared/Footer';
 
 const App = () => {
@@ -18,7 +19,7 @@ const App = () => {
       <Routes>
         <Route path="/products/:id" element={<ProductsDetails />} />
         <Route path="/products" element={<Products />} />
-        {/*<Route path="/cart" element={<ShopCart />} */}
+        <Route path="/cart" element={<Cart />} />
         <Route path="/" element={<Navigate to="/products"/>} />
       </Routes>
       <Footer />

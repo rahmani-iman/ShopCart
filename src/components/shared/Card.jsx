@@ -37,7 +37,6 @@ const Card = ({productData}) => {
                         <button className={style.smallButton} onClick={() => dispatch(increase(productData))}><img src={plus} alt='plus_icon' /></button> :
                         <button onClick={() => dispatch(addItem(productData))}>Add to Cart</button>
                     }
-                    {/*To write in redux format, we must enter type and payload manually and act as follows in dispatch: onClick={() => dispatch({type: "DECREASE", payload: productData})}*/}
                 </div>
             </div>
         </div>

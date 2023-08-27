@@ -39,20 +39,20 @@ const Navbar = () => {
                     <img src={searchIcon} alt="search" />
                 </div>
                 <div className={style.user_btns}>
-                    <div className={style.cart}>
+                    <Link to='/cart' className={style.cart}>
                         <span className={style.counter}>{cartState.itemsCounter}</span>
                         <img src={cartIcon} alt="cart"/>
-                    </div>
+                    </Link>
                     <div className={style.user}>
                         <img src={userIcon} alt="user"/>
                     </div>
                 </div>
                 <ul className={style.category}>
-                    <li onClick={() => dispatch(setInputValue(""))}>all products</li>
-                    <li onClick={(e) => dispatch(setInputValue(e.target.innerText))}>electronics</li>
-                    <li onClick={(e) => dispatch(setInputValue(e.target.innerText))}>jewelery</li>
-                    <li onClick={(e) => dispatch(setInputValue(e.target.innerText))}>men's clothing</li>
-                    <li onClick={(e) => dispatch(setInputValue(e.target.innerText))}>women's clothing</li>
+                    <li onClick={() => dispatch(setInputValue(""), clickHandler())}>all products</li>
+                    <li onClick={(e) => dispatch(setInputValue(e.target.innerText), clickHandler())}>electronics</li>
+                    <li onClick={(e) => dispatch(setInputValue(e.target.innerText), clickHandler())}>jewelery</li>
+                    <li onClick={(e) => dispatch(setInputValue(e.target.innerText), clickHandler())}>men's clothing</li>
+                    <li onClick={(e) => dispatch(setInputValue(e.target.innerText), clickHandler())}>women's clothing</li>
                 </ul>
             </div>
         </div>
