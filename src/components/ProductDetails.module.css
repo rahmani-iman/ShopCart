@@ -131,6 +131,7 @@
         text-align: center;
         border: none;
         border-bottom: var(--border);
+        margin-bottom: 1rem;
         margin-top: 2rem;
     }
     .productImage img {

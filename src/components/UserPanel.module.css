@@ -1,0 +1,121 @@
+.container {
+    display: flex;
+    align-items: flex-start;
+    padding: var(--padding_container);
+}
+.header {
+    padding-bottom: 2rem;
+    border-bottom: var(--border);
+}
+.profile {
+    width: 20%;
+    border: var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+}
+.avatar {
+    display: flex;
+    align-items: center;
+}
+.user {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.user img {
+    width: 24px;
+}
+.username {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 1rem;
+}
+.bl {
+    width: 1px;
+    height: 50px;
+    margin-left: 2.2rem;
+    background-color: var(--primary_color);
+}
+.circle {
+    width: 10px;
+    height: 10px;
+    margin-left: 1.74rem;
+    background-color: var(--primary_color);
+    border-radius: 100%;
+}
+.head {
+    display: flex;
+    align-items: center;
+}
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 1rem;
+}
+.tail {
+    padding-top: 2rem;
+    padding-left: 1rem;
+}
+.tail div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.tail img{
+    width: 24px;
+}
+.tail span {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: var(--smooth);
+}
+.tail span:hover {
+    color: var(--primary_color);
+}
+.cart {
+    width: 80%;
+    padding: 2rem;
+    border: var(--border);
+    border-radius: var(--radius);
+    margin-left: 5rem;
+    text-align: center;
+}
+.cart a {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary_color);
+}
+
+/* Responsive */
+@media screen and (max-width: 1080px) {
+    .profile {
+        width: 40%;
+    }
+    .cart {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .profile {
+        width: 100%;
+    }
+    .cart {
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 4rem;
+    }
+}

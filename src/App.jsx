@@ -10,6 +10,7 @@ import Navbar from './components/shared/Navbar';
 import Products from './components/Products';
 import ProductsDetails from './components/ProductDetails';
 import Cart from './components/Cart';
+import UserPanel from './components/UserPanel';
 import Footer from './components/shared/Footer';
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/products/:id" element={<ProductsDetails />} />
         <Route path="/products" element={<Products />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/userpanel" element={<UserPanel />} />
         <Route path="/" element={<Navigate to="/products"/>} />
       </Routes>
       <Footer />

@@ -43,9 +43,9 @@ const Navbar = () => {
                         <span className={style.counter}>{cartState.itemsCounter}</span>
                         <img src={cartIcon} alt="cart"/>
                     </Link>
-                    <div className={style.user}>
+                    <Link to='/userpanel' className={style.user}>
                         <img src={userIcon} alt="user"/>
-                    </div>
+                    </Link>
                 </div>
                 <ul className={style.category}>
                     <li onClick={() => dispatch(setInputValue(""), clickHandler())}>all products</li>

@@ -54,6 +54,7 @@
 }
 .cart {
     position: relative;
+    color: var(--black_color);
 }
 .cart span {
     display: flex;
